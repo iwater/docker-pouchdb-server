@@ -6,6 +6,12 @@ Run the container, binding a data directory.
 docker run -d -p 5984:5984 -v /path/to/data:/pouchdb --hostname=pouchdb-server --name=pouchdb-server scttmthsn/docker-pouchdb-server
 ```
 
+Supports optional PouchDB Server config.json.
+
+```
+-v /path/to/config.json:/pouchdb/config.json
+```
+
 You can then browse to the admin panel at http://localhost:5984/_utils/.
 
 ## CLI Tools
