@@ -7,7 +7,7 @@ source lib.sh
 
 PASS_LENGTH=32
 
-MESSAGE="Admin party over, you're not getting in."
+MESSAGE="Unauthorized, please login at http://0.0.0.0:5984/_utils/#login?"
 
 if [ "$1" == "" ]; then
 	echo "Usage: add-admin [name]"
