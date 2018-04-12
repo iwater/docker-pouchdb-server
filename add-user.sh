@@ -11,7 +11,7 @@ if [ "$1" == "" ]; then
 	exit 1
 else
 	USER="$1"
-	PASS=$(randomPass $PASS_LENGTH)
+	PASS=$(random_pass $PASS_LENGTH)
 fi
 
 OK=$(curl \
@@ -20,7 +20,7 @@ OK=$(curl \
 	-H "Content-Type: application/json" \
 	-d "{\"_id\":\"org.couchdb.user:$USER\",\"name\":\"$USER\",\"type\":\"user\",\"roles\":[],\"password\":\"$PASS\"}" \
 	127.0.0.1:5984/_users/org.couchdb.user:$USER |
-	jsonValue ok
+	json_value ok
 )
 
 if [ "$OK" == "true" ]; then

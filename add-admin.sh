@@ -21,7 +21,7 @@ if curl -s $ADMIN_URL | grep -q 'unauthorized'; then
 	echo $MESSAGE
 	exit 1
 else
-	PASS=$(randomPass $PASS_LENGTH)
+	PASS=$(random_pass $PASS_LENGTH)
 	OK=$(curl -s -X PUT $ADMIN_URL/$USER -d "\"$PASS\"")
 
 	if [ "$OK" == "\"\"" ]; then
