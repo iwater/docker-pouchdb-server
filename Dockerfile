@@ -11,8 +11,7 @@ ADD add-admin.sh /bin/add-admin
 ADD add-user.sh /bin/add-user
 ADD lib.sh /bin/lib.sh
 
-RUN chmod +x /bin/add-admin
-RUN chmod +x /bin/add-user
+RUN chmod +x /bin/add-admin /bin/add-user
 
 WORKDIR /pouchdb
 
