@@ -1,5 +1,5 @@
 
-FROM node:alpine
+FROM node:10-alpine
 LABEL maintainer "Scott Mathieson <scttmthsn@gmail.com>"
 
 RUN apk --update --no-cache add curl g++ make python && \
