@@ -1,4 +1,4 @@
-This image is based on the latest [Node.JS Alpine](https://hub.docker.com/_/node/) image, [PouchDB Server](https://github.com/pouchdb/pouchdb-server), and [levelDB](https://github.com/google/leveldb).
+This image is based on the latest [Node.JS LTS Alpine](https://hub.docker.com/_/node/) image, [PouchDB Server](https://github.com/pouchdb/pouchdb-server), and [levelDB](https://github.com/google/leveldb).
 
 Run the container, binding a data directory.
 
