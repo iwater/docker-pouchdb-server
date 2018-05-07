@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# no sha256sum on mac
+function sha256sum() {
+	shasum -a 256 "$@"
+}
+
 function random_pass() {
 	date +%s | sha256sum | base64 | head -c ${1:-16}
 }
