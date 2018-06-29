@@ -7,13 +7,14 @@ source lib.sh
 
 PASS_LENGTH=32
 
-MESSAGE="Unauthorized, please login at http://0.0.0.0:5984/_utils/#login?"
+SERVER_URL='http://localhost:5984'
+MESSAGE="Unauthorized, please login at ${SERVER_URL}/_utils/#login?"
 
 if [ "$1" == "" ]; then
 	echo "Usage: add-admin [name]"
 	exit 1
 else
-	ADMIN_URL="127.0.0.1:5984/_config/admins"
+	ADMIN_URL="${SERVER_URL}/_config/admins"
 	USER="$1"
 fi
 
